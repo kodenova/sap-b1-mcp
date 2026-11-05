@@ -1,0 +1,57 @@
+{
+  "name": "@kodenova/sap-b1-mcp",
+  "version": "0.1.0",
+  "description": "Read-only MCP server for SAP Business One Service Layer: business partners, items, orders, invoices, stock.",
+  "mcpName": "io.github.kodenova/sap-b1-mcp",
+  "type": "module",
+  "bin": {
+    "sap-b1-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "fixtures",
+    "config/saved-queries.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sap-business-one",
+    "sap-b1",
+    "service-layer",
+    "erp",
+    "ai",
+    "claude",
+    "chatgpt"
+  ],
+  "author": "Kodenova (Zain Abbas) <https://kodenova.com>",
+  "license": "MIT",
+  "homepage": "https://kodenova.com/services/mcp-server-development/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodenova/sap-b1-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kodenova/sap-b1-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

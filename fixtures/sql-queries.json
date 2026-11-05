@@ -1,0 +1,7 @@
+{
+  "KN_SALES_BY_MONTH": [
+    { "Year": 2026, "Month": 8, "NetSales": 500 },
+    { "Year": 2026, "Month": 9, "NetSales": 10830 },
+    { "Year": 2026, "Month": 10, "NetSales": 4500.5 }
+  ]
+}

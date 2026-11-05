@@ -1,0 +1,46 @@
+{
+  "queries": {
+    "customers_over_balance": {
+      "kind": "odata",
+      "description": "Customers whose account balance is above a threshold, highest first",
+      "resource": "BusinessPartners",
+      "select": ["CardCode", "CardName", "Currency", "CurrentAccountBalance", "CreditLimit"],
+      "filter": {
+        "and": [
+          { "field": "CardType", "op": "eq", "value": "cCustomer" },
+          { "field": "CurrentAccountBalance", "op": "gt", "value": { "param": "minBalance" } }
+        ]
+      },
+      "orderBy": "CurrentAccountBalance desc",
+      "maxRows": 100,
+      "params": {
+        "minBalance": { "type": "number", "default": 0, "description": "Minimum balance" }
+      }
+    },
+    "invoices_due_before": {
+      "kind": "odata",
+      "description": "Open A/R invoices due before a date",
+      "resource": "Invoices",
+      "select": ["DocEntry", "DocNum", "CardCode", "CardName", "DocDueDate", "DocTotal", "PaidToDate", "DocCurrency"],
+      "filter": {
+        "and": [
+          { "field": "DocumentStatus", "op": "eq", "value": "bost_Open" },
+          { "field": "DocDueDate", "op": "lt", "value": { "param": "dueBefore" } }
+        ]
+      },
+      "orderBy": "DocDueDate",
+      "params": {
+        "dueBefore": { "type": "date", "required": true, "description": "YYYY-MM-DD" }
+      }
+    },
+    "sales_by_month": {
+      "kind": "sqlquery",
+      "description": "Net A/R sales per month for a year (needs SQLQueries entry KN_SALES_BY_MONTH created by your admin)",
+      "sqlCode": "KN_SALES_BY_MONTH",
+      "maxRows": 24,
+      "params": {
+        "year": { "type": "integer", "required": true }
+      }
+    }
+  }
+}

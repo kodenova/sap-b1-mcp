@@ -1,0 +1,6 @@
+[
+  { "DocEntry": 101, "DocNum": 5001, "CardCode": "C10000", "CardName": "Demo Customer Alpha", "NumAtCard": "PO-A-1", "DocDate": "2026-10-20", "DocDueDate": "2026-11-10", "DocTotal": 3000, "DocCurrency": "USD", "PaidToDate": 0, "DocumentStatus": "bost_Open" },
+  { "DocEntry": 102, "DocNum": 5002, "CardCode": "C10000", "CardName": "Demo Customer Alpha", "NumAtCard": "PO-A-2", "DocDate": "2026-10-28", "DocDueDate": "2026-11-15", "DocTotal": 1200, "DocCurrency": "USD", "PaidToDate": 0, "DocumentStatus": "bost_Open" },
+  { "DocEntry": 103, "DocNum": 5003, "CardCode": "C30000", "CardName": "Demo Customer Gamma", "NumAtCard": "", "DocDate": "2026-11-01", "DocDueDate": "2026-11-20", "DocTotal": 980, "DocCurrency": "EUR", "PaidToDate": 0, "DocumentStatus": "bost_Open" },
+  { "DocEntry": 100, "DocNum": 5000, "CardCode": "C20000", "CardName": "Demo Customer Beta", "NumAtCard": "", "DocDate": "2026-09-15", "DocDueDate": "2026-09-30", "DocTotal": 640, "DocCurrency": "USD", "PaidToDate": 0, "DocumentStatus": "bost_Close" }
+]

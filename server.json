@@ -1,0 +1,78 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.kodenova/sap-b1-mcp",
+  "title": "SAP Business One (read-only)",
+  "description": "Read-only SAP Business One Service Layer tools: partners, items, orders, invoices, stock.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/kodenova/sap-b1-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://kodenova.com/services/mcp-server-development/",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@kodenova/sap-b1-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SAPB1_SERVICE_LAYER_URL",
+          "description": "Service Layer base URL, e.g. https://your-b1-server:50000/b1s/v1",
+          "isRequired": true,
+          "format": "string"
+        },
+        {
+          "name": "SAPB1_COMPANY_DB",
+          "description": "Company database (schema) name",
+          "isRequired": true,
+          "format": "string"
+        },
+        {
+          "name": "SAPB1_USERNAME",
+          "description": "Dedicated B1 user with read-only authorizations",
+          "isRequired": true,
+          "format": "string"
+        },
+        {
+          "name": "SAPB1_PASSWORD",
+          "description": "Password of that B1 user",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "SAPB1_ALLOW_SELF_SIGNED",
+          "description": "Set to true only if your Service Layer uses a self-signed certificate",
+          "isRequired": false,
+          "default": "false",
+          "format": "boolean"
+        },
+        {
+          "name": "SAPB1_MAX_ROWS",
+          "description": "Maximum rows any tool may return (default 50, hard cap 500)",
+          "isRequired": false,
+          "default": "50",
+          "format": "number"
+        },
+        {
+          "name": "SAPB1_SAVED_QUERIES_FILE",
+          "description": "Path to the saved-queries JSON file used by run_saved_query",
+          "isRequired": false,
+          "format": "filepath"
+        },
+        {
+          "name": "SAPB1_MOCK",
+          "description": "Set to true to use bundled demo fixtures instead of SAP",
+          "isRequired": false,
+          "default": "false",
+          "format": "boolean"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "ItemCode": "A00001",
+    "ItemName": "Demo Widget Small",
+    "ItemsGroupCode": 100,
+    "BarCode": "0000000000017",
+    "InventoryItem": "tYES",
+    "SalesItem": "tYES",
+    "PurchaseItem": "tYES",
+    "InventoryUOM": "EA",
+    "QuantityOnStock": 340,
+    "QuantityOrderedFromVendors": 100,
+    "QuantityOrderedByCustomers": 60,
+    "Valid": "tYES",
+    "Frozen": "tNO",
+    "ItemWarehouseInfoCollection": [
+      { "WarehouseCode": "01", "InStock": 300, "Committed": 50, "Ordered": 100 },
+      { "WarehouseCode": "02", "InStock": 40, "Committed": 10, "Ordered": 0 },
+      { "WarehouseCode": "03", "InStock": 0, "Committed": 0, "Ordered": 0 }
+    ]
+  },
+  {
+    "ItemCode": "A00002",
+    "ItemName": "Demo Widget Large",
+    "ItemsGroupCode": 100,
+    "BarCode": "0000000000024",
+    "InventoryItem": "tYES",
+    "SalesItem": "tYES",
+    "PurchaseItem": "tYES",
+    "InventoryUOM": "EA",
+    "QuantityOnStock": 0,
+    "QuantityOrderedFromVendors": 25,
+    "QuantityOrderedByCustomers": 5,
+    "Valid": "tYES",
+    "Frozen": "tNO",
+    "ItemWarehouseInfoCollection": [
+      { "WarehouseCode": "01", "InStock": 0, "Committed": 5, "Ordered": 25 }
+    ]
+  },
+  {
+    "ItemCode": "B10000",
+    "ItemName": "Demo Service Hour",
+    "ItemsGroupCode": 101,
+    "BarCode": "",
+    "InventoryItem": "tNO",
+    "SalesItem": "tYES",
+    "PurchaseItem": "tNO",
+    "InventoryUOM": "H",
+    "QuantityOnStock": 0,
+    "QuantityOrderedFromVendors": 0,
+    "QuantityOrderedByCustomers": 0,
+    "Valid": "tYES",
+    "Frozen": "tNO",
+    "ItemWarehouseInfoCollection": []
+  },
+  {
+    "ItemCode": "C20001",
+    "ItemName": "Demo Spare Part",
+    "ItemsGroupCode": 102,
+    "BarCode": "0000000000031",
+    "InventoryItem": "tYES",
+    "SalesItem": "tYES",
+    "PurchaseItem": "tYES",
+    "InventoryUOM": "EA",
+    "QuantityOnStock": 12,
+    "QuantityOrderedFromVendors": 0,
+    "QuantityOrderedByCustomers": 2,
+    "Valid": "tYES",
+    "Frozen": "tNO",
+    "ItemWarehouseInfoCollection": [
+      { "WarehouseCode": "02", "InStock": 12, "Committed": 2, "Ordered": 0 }
+    ]
+  }
+]
